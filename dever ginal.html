@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Currículo - João Duarte Grillo</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    color: #f5f5f5;
+    overflow-x: hidden;
+    background: #0d1b2a;
+  }
+
+  /* Canvas ocupando toda a tela */
+  canvas#stars-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: block;
+  }
+
+  .container {
+    max-width: 850px;
+    margin: auto;
+    background: rgba(20, 20, 30, 0.8);
+    padding: 30px 40px;
+    box-shadow: 0 0 30px rgba(0, 191, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+  }
+
+  header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #444;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2.4em;
+    color: #00bfff;
+    text-shadow: 0 0 10px #00bfff, 0 0 20px #1e90ff;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from { text-shadow: 0 0 5px #00bfff, 0 0 10px #1e90ff; }
+    to { text-shadow: 0 0 20px #00ffff, 0 0 40px #1e90ff; }
+  }
+
+  .profile-photo {
+    margin-top: 15px;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 3px solid #00bfff;
+    box-shadow: 0 0 15px #00bfff;
+  }
+
+  .section {
+    margin-top: 25px;
+    transition: transform 0.3s, background 0.3s;
+  }
+
+  .section h2 {
+    color: #00ffff;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #00bfff;
+    display: inline-block;
+    padding-bottom: 4px;
+    text-shadow: 0 0 8px #00bfff;
+  }
+
+  .section:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  ul { list-style: none; padding: 0; margin: 0; }
+  ul li { margin: 8px 0; }
+
+  a { color: #00bfff; text-decoration: none; transition: color 0.3s; }
+  a:hover { color: #1e90ff; text-decoration: underline; }
+
+  .contact li i {
+    margin-right: 8px;
+    color: #00bfff;
+    transition: transform 0.3s, color 0.3s;
+  }
+
+  .contact li i:hover,
+  .skills-icons i:hover {
+    transform: scale(1.3) rotate(10deg);
+    color: #ff6600;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 2px solid #444;
+  }
+
+  .skills-icons i {
+    font-size: 2.2em;
+    margin: 0 12px;
+    color: #00bfff;
+    text-shadow: 0 0 10px #00bfff;
+    transition: transform 0.4s, color 0.4s, text-shadow 0.4s;
+    animation: pulse 3s infinite alternate;
+  }
+
+  @keyframes pulse {
+    from { text-shadow: 0 0 5px #00bfff, 0 0 15px #1e90ff; }
+    to { text-shadow: 0 0 20px #00ffff, 0 0 40px #1e90ff; }
+  }
+</style>
+</head>
+<body>
+
+<canvas id="stars-bg"></canvas>
+
+<div class="container">
+  <header>
+    <h1>João Duarte Grillo</h1>
+    <img src="E2BBCF9C-1764-4740-A403-1CC7D623257B.jpg"Foto de Perfil" class="profile-photo">
+  </header>
+
+  <section class="section">
+    <h2>Contato</h2>
+    <ul class="contact">
+      <li><i class="fas fa-envelope"></i> joaogrillo007@gmail.com</li>
+      <li><i class="fas fa-phone"></i> (61) 99912-4637</li>
+      <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/joão-grillo-24b5601b2" target="_blank">linkedin.com/in/joão-grillo</a></li>
+      <li><i class="fab fa-github"></i> <a href="https://github.com/eog00" target="_blank">github.com/eog00</a></li>
+      <li><i class="fas fa-map-marker-alt"></i> Lago Sul, Brasília</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Resumo Profissional</h2>
+    <p>
+      Desenvolvedor autônomo, proativo e dedicado, com experiência prática na criação de sites e sistemas utilizando 
+      <strong>HTML, CSS, JavaScript, Java e Python</strong>. Possuo um portfólio com projetos pessoais e realizados para terceiros, 
+      que demonstram minha capacidade de transformar ideias em soluções funcionais e bem estruturadas. Minha vivência em 
+      empresas incubadoras ampliou minha visão de negócios e proporcionou maior agilidade no desenvolvimento de projetos. 
+      Atualmente, busco uma oportunidade para aplicar minhas habilidades em um ambiente profissional dinâmico e inovador.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Experiência Profissional</h2>
+    <div>
+      <h3>Líder de RH - Skymovie</h3>
+      <p><strong>Período:</strong> janeiro de 2025 - julho de 2025</p>
+      <ul>
+        <li>Condução de processos seletivos completos, desde a divulgação de vagas e triagem de currículos até entrevistas e feedback aos candidatos.</li>
+        <li>Identificação de necessidades de treinamento e apoio no desenvolvimento de programas de capacitação para os colaboradores.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Educação</h2>
+    <div>
+      <h3>Análise e Desenvolvimento de Sistemas - CEUB - Em andamento</h3>
+      <p><strong>Período:</strong> julho de 2025 - dezembro de 2027</p>
+      <p><strong>Cursos complementares:</strong> Alura – Formação em HTML, CSS, JavaScript, Java e Python</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Habilidades</h2>
+    <ul>
+      <li><i class="fas fa-code"></i> <strong>Tecnologias:</strong> HTML, CSS, JavaScript, Java, Python</li>
+      <li><i class="fas fa-language"></i> <strong>Idiomas:</strong> Inglês e Espanhol (nível intermediário)</li>
+      <li><i class="fas fa-users"></i> <strong>Competências pessoais:</strong> Liderança, Comunicação, Proatividade</li>
+    </ul>
+  </section>
+
+  <footer>
+    <div class="skills-icons">
+      <i class="fab fa-html5" title="HTML5"></i>
+      <i class="fab fa-css3-alt" title="CSS3"></i>
+      <i class="fab fa-js" title="JavaScript"></i>
+      <i class="fab fa-java" title="Java"></i>
+      <i class="fab fa-python" title="Python"></i>
+    </div>
+  </footer>
+</div>
+
+<script>
+  const canvas = document.getElementById("stars-bg");
+  const ctx = canvas.getContext("2d");
+  let stars = [];
+  const numStars = 150;
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  window.addEventListener("resize", resizeCanvas);
+  resizeCanvas();
+
+  function initStars() {
+    stars = [];
+    for(let i = 0; i < numStars; i++) {
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: Math.random() * 1.2 + 0.2,
+        d: Math.random() * 0.5
+      });
+    }
+  }
+  initStars();
+
+  function drawStars() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "white";
+    ctx.beginPath();
+    for(let i = 0; i < stars.length; i++){
+      let s = stars[i];
+      ctx.moveTo(s.x, s.y);
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI*2, true);
+    }
+    ctx.fill();
+    updateStars();
+  }
+
+  function updateStars() {
+    for(let i = 0; i < stars.length; i++){
+      let s = stars[i];
+      s.y += s.d;
+      if(s.y > canvas.height) {
+        s.y = 0;
+        s.x = Math.random() * canvas.width;
+      }
+    }
+  }
+
+  function animate() {
+    drawStars();
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+</script>
+
+</body>
+</html>
